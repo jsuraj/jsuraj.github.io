@@ -1,4 +1,5 @@
-<body bgcolor="silver">
+<body bgcolor="#F2F2F4">
+<font color="black" face="Arial">
 <h1>Suraj Jagtap</h1>
 
 <h2><u>About</u></h2>
@@ -33,4 +34,5 @@ The aim was to facilitate users with location and other details like distance, c
 <h2><u>Contact<u></h2>
 
 <p><a href="mailto:jsurajbaramati@gmail.com">jsurajbaramati@gmail.com</a></p>
+</font>
 </body>
