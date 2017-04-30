@@ -1,11 +1,16 @@
-<html lang="en" >
+<html ng-app="MyApp">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <base href="/jsuraj.github.io/" -->
+  <!-- <base href="/"> -->
+  <script>
+  document.write('<base href="' + document.location + '" />');
+  </script>
   <!-- Angular Material style sheet -->
   <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
   <link rel="stylesheet" type="text/css" href="index.css">
 </head>
-<body ng-app="MyApp" ng-cloak>
+<body  ng-cloak>
   <!--
     Your HTML content here
   -->  
@@ -16,13 +21,13 @@
     <md-nav-bar
       md-selected-nav-item="currentNavItem"
       nav-bar-aria-label="navigation links">
-      <md-nav-item md-nav-click="goto('page1')" name="page1">
+      <md-nav-item md-nav-href="about" name="page1">
         About
       </md-nav-item>
-      <md-nav-item md-nav-click="goto('page2')" name="page2">
+      <md-nav-item md-nav-href="projects" name="page2">
         Projects
       </md-nav-item>
-      <md-nav-item md-nav-click="goto('page3')" name="page3">
+      <md-nav-item md-nav-href="contact" name="page3">
         Contact
       </md-nav-item>
       <!-- these require actual routing with ui-router or ng-route, so they
@@ -35,6 +40,8 @@
       </md-nav-item>
       -->
     </md-nav-bar>
+      <div ng-view>
+      </div>
   </md-content>
 </div>
   <!-- Angular Material requires Angular.js Libraries -->
