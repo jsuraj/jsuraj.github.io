@@ -9,6 +9,7 @@ on:
   workflow_dispatch:
 
 # Allow this job to clone the repo and create a page deployment
+# trigger
 permissions:
   contents: read
   pages: write
