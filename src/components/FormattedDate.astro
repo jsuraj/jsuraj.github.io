@@ -1,0 +1,16 @@
+---
+type Props = { date: Date };
+
+const { date } = Astro.props;
+const dateObject = date instanceof Date ? date : new Date(date);
+---
+
+<time datetime={dateObject.toISOString()}>
+  {
+    dateObject.toLocaleDateString("en-us", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    })
+  }
+</time>
