@@ -11,7 +11,7 @@ export type Link = {
 
 export type Hero = {
   title?: string;
-  text?: string;
+  text?: string[];
   image?: Image;
   actions?: Link[];
 };
@@ -54,7 +54,25 @@ const siteConfig: SiteConfig = {
       text: "Blog",
       href: "/blog",
     },
+    {
+      text: "Projects",
+      href: "/projects",
+    },
   ],
+  hero: {
+    title: "Hi there, I'am **Suraj Jagtap**.",
+    text: [
+      "- Software engineer based in Pune, India.",
+      "- Work on Frontend, React, Nodejs.",
+      "- Working on Gen AI, LLMs, langchain.",
+      "- Mobile apps in React Native and Flutter",
+    ],
+    image: {
+      src: "/images/profile.jpg",
+      alt: "Suraj Jagtap",
+    },
+    actions: [],
+  },
 };
 
 export default siteConfig;
