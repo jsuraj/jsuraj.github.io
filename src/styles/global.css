@@ -4,10 +4,10 @@
 
 @layer base {
   :root {
-    --color-text-main: 23 23 23; /* #171717 */
-    --color-bg-main: 242 241 236; /* #F2F1EC */
-    --color-bg-muted: 234 233 225; /* #EAE9E1 */
-    --color-border-main: 23 23 23; /* #171717 */
+    --color-text-main: 50 50 50; /* #323232 for softer text */
+    --color-bg-main: 250 249 246; /* #FAF9F6 for a off white background */
+    --color-bg-muted: 245 245 245; /* #F5F5F5 for a light muted background */
+    --color-border-main: 200 200 200; /* #C8C8C8 for a lighter border */
   }
   html.dark {
     --color-text-main: 242 241 236; /* #F2F1EC */
@@ -16,3 +16,4 @@
     --color-border-main: 242 241 236; /* #F2F1EC */
   }
 }
+
