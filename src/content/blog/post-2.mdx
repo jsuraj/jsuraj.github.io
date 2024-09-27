@@ -1,0 +1,121 @@
+---
+title: Drag and Drop in HTML5
+excerpt: Explore drag and drop features in browsers.
+publishDate: "September 14 2024"
+tags:
+  - html5
+  - javascript
+seo:
+  image:
+    src: "/images/post-1/profile.jpg"
+    alt: hello world image
+---
+import SimpleDragDrop from '../../components/posts/SimpleDragDrop.jsx';
+
+In this post, we will see how to implement drag and drop functionality in browsers using the native drag and drop interface in HTML5.
+
+The idea is simple:
+- Customize an element to make it draggable
+- Allow dropping the draggable element in the droppable area.
+
+### Declare two boxes
+
+```html
+<div className="flex gap-8">
+  <div
+    id="box1"
+    className="w-[300px] h-[300px] border border-black flex items-center justify-center"
+  />
+  <div
+    id="box2"
+    className="w-[300px] h-[300px] border border-black flex items-center justify-center"
+  />
+</div>
+```
+These two boxes will serve as our "drop zones." The user will be able to drag an item from one box and drop it into the other.
+
+### Add a div that we want to make as draggable inside "box1"
+
+```html
+  <div
+    id="box1"
+    className="w-[300px] h-[300px] border border-black flex items-center justify-center"
+  />
+    <div
+      id="draggable1"
+      className="w-[50px] h-[50px] bg-red-500 cursor-move"
+    />
+  </div>
+```
+
+This red square will be the item that can be dragged between the boxes.
+
+### Making the Element Draggable
+
+To make an element draggable, we need to add the `draggable` attribute to it and handle the `dragstart` event.
+The `dragstart` event will trigger when the user starts dragging the item. Here’s how we can implement it:
+
+```js
+const handleOnDragStart = (event) => {
+  event.dataTransfer.setData('text/plain', event.target.id);
+};
+```
+
+In this function, we use `event.dataTransfer.setData()` to store the ID of the dragged element. This ID will later help us identify which element was dragged and where it needs to be dropped.
+
+Next, update the `draggable1` div to make it draggable and add the `onDragStart` event handler:
+
+```html
+<div
+  id="draggable1"
+  className="w-[50px] h-[50px] bg-red-500 cursor-move"
+  draggable="true"
+  onDragStart={handleOnDragStart}
+/>
+```
+
+### Dropping the Element
+```js
+const handleOnDrop = (event) => {
+  event.preventDefault();
+  const data = event.dataTransfer.getData('text/plain');
+  event.target.appendChild(document.getElementById(data));
+};
+
+const handleDragOver = (event) => {
+  event.preventDefault();
+};
+```
+- The `handleOnDrop` function prevents the default behavior (which is important for allowing the drop), retrieves the ID of the dragged element from `event.dataTransfer`, and appends the dragged element to the drop target.
+- The `handleDragOver` function ensures that the dragged element can be dropped by preventing the default behavior.
+
+Finally, apply these event handlers to the boxes:
+
+```html
+<div
+  id="box1"
+  onDrop={handleOnDrop}
+  onDragOver={handleDragOver}
+  className="w-[300px] h-[300px] border border-black flex items-center justify-center"
+>
+  <div
+    id="draggable1"
+    className="w-[50px] h-[50px] bg-red-500 cursor-move"
+    draggable="true"
+    onDragStart={handleOnDragStart}
+  />
+</div>
+
+<div
+  id="box2"
+  onDrop={handleOnDrop}
+  onDragOver={handleDragOver}
+  className="w-[300px] h-[300px] border border-black flex items-center justify-center"
+/>
+```
+
+## Demo
+
+<SimpleDragDrop client:visible />
+
+This example demonstrates how easy it is to implement drag-and-drop functionality with just a few lines of code. Feel free to expand on this by adding more drag-and-drop targets or customizing the appearance and behavior of the elements further!
