@@ -9,10 +9,11 @@ tags:
   - misc
 seo:
   image:
-    src: ""
+    src: "/images/post-1/profile.jpg"
     alt: hello world image
 ---
-<img src='/images/profile.jpg' alt='Suraj Jagtap' width='200' height='200'>
+
+<img src='/images/post-1/profile.jpg' alt='Suraj Jagtap' width='200' height='200'>
 Hello, world! I'm Suraj Jagtap, a developer working on JavaScript and Generative AI. This blog marks the start of a new chapter, where I'll be documenting my journey, experiences, and the lessons I learn as I build exciting projects at the intersection of code and AI.
 
 I'll be sharing insights on:
@@ -25,5 +26,3 @@ I'll be sharing insights on:
 This blog is built using [Astro](https://astro.build/) and [TailwindCSS](https://tailwindcss.com/).
 
 Feel free to follow along as I share my insights on Twitter at [@SurajBuilds](https://x.com/SurajBuilds) and on [LinkedIn](https://www.linkedin.com/in/surajdjagtap/) 
-
-
