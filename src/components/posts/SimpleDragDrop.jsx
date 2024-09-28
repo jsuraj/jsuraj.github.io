@@ -1,11 +1,11 @@
 const SimpleDragDrop = () => {
   const handleOnDragStart = (event) => {
-    event.dataTransfer.setData('text/plain', event.target.id);
+    event.dataTransfer.setData("text/plain", event.target.id);
   };
 
   const handleOnDrop = (event) => {
     event.preventDefault();
-    const data = event.dataTransfer.getData('text/plain');
+    const data = event.dataTransfer.getData("text/plain");
     event.target.appendChild(document.getElementById(data));
   };
 
