@@ -6,7 +6,7 @@ import FormattedDate from "../../components/FormattedDate.astro";
 import PostPreview from "../../components/PostPreview.astro";
 import Subscribe from "../../components/Subscribe.astro";
 import { sortItemsByDateDesc } from "../../utils/data-utils";
-import { slugify } from "../../utils/common-utils";
+import { slugify, isMobile } from "../../utils/common-utils";
 
 export async function getStaticPaths() {
   const posts = (await getCollection("blog")).sort(sortItemsByDateDesc);
@@ -84,7 +84,10 @@ const { Content } = await post.render();
       <Button
         class="copy-url-button"
         aria-label="Copy link"
+        data-is-mobile={isMobile()}
         data-url={href}
+        data-title={title}
+        data-excerpt={excerpt}
         data-tooltip-default="Copy link"
         data-tooltip-success="Copied">Share</Button
       >
@@ -128,8 +131,24 @@ const { Content } = await post.render();
     async function copyUrl(button: HTMLButtonElement) {
       let url = button.getAttribute("data-url") || "";
       let label = button.innerText;
+      const isMobile = button.getAttribute("is-mobile") || false;
+      const title = button.getAttribute("data-title") || "";
+      const excerpt = button.getAttribute("data-excerpt") || "";
 
-      await navigator.clipboard.writeText(url);
+      if (isMobile) {
+        const shareData = {
+          title: title,
+          text: excerpt,
+          url: url,
+        };
+        try {
+          await navigator.share(shareData);
+        } catch (err) {
+          await navigator.clipboard.writeText(url);
+        }
+      } else {
+        await navigator.clipboard.writeText(url);
+      }
 
       button.innerText = "Copied";
 
