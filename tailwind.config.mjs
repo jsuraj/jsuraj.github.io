@@ -7,7 +7,6 @@ export default {
   theme: {
     fontFamily: {
       sans: ["Inter", ...defaultTheme.fontFamily.sans],
-      // serif: ["Newsreader", ...defaultTheme.fontFamily.serif],
     },
     extend: {
       textColor: {
@@ -54,12 +53,10 @@ export default {
               },
             },
             "h1,h2,h3,h4,h5,h6": {
-              // fontFamily: theme("fontFamily.serif"),
               fontWeight: 500,
             },
             blockquote: {
               border: 0,
-              // fontFamily: theme("fontFamily.serif"),
               fontSize: "1.3125em",
               fontStyle: "italic",
               fontWeight: "normal",
@@ -69,6 +66,35 @@ export default {
                 fontSize: "1.66667em",
                 lineHeight: 1.3,
               },
+            },
+            // Updated styles for inline code
+            "code::before": {
+              content: "none",
+            },
+            "code::after": {
+              content: "none",
+            },
+            code: {
+              color: "rgb(30 30 30)", // Slightly darker than main text for contrast
+              backgroundColor: "rgb(235 234 231)", // Slightly darker than bg-muted
+              borderRadius: theme("borderRadius.md"),
+              padding: `${theme("spacing.1")} ${theme("spacing.1")}`,
+              fontSize: "0.875em",
+              fontWeight: "600",
+            },
+            // Dark mode styles for inline code
+            ".dark code": {
+              color: "rgb(252 251 246)", // Slightly lighter than main text for contrast
+              backgroundColor: "rgb(46 46 46)", // Slightly lighter than bg-muted
+            },
+            // Preserve styles for code blocks
+            "pre code": {
+              color: "inherit",
+              backgroundColor: "transparent",
+              borderRadius: 0,
+              padding: 0,
+              fontSize: "inherit",
+              fontWeight: "normal",
             },
           },
         },
