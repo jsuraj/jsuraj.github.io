@@ -131,7 +131,7 @@ const { Content } = await post.render();
     async function copyUrl(button: HTMLButtonElement) {
       let url = button.getAttribute("data-url") || "";
       let label = button.innerText;
-      const isMobile = button.getAttribute("is-mobile") || false;
+      const isMobile = button.getAttribute("data-is-mobile") || false;
       const title = button.getAttribute("data-title") || "";
       const excerpt = button.getAttribute("data-excerpt") || "";
 
