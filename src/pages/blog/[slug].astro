@@ -6,7 +6,7 @@ import FormattedDate from "../../components/FormattedDate.astro";
 import PostPreview from "../../components/PostPreview.astro";
 import Subscribe from "../../components/Subscribe.astro";
 import { sortItemsByDateDesc } from "../../utils/data-utils";
-import { slugify, isMobile } from "../../utils/common-utils";
+import { slugify } from "../../utils/common-utils";
 
 export async function getStaticPaths() {
   const posts = (await getCollection("blog")).sort(sortItemsByDateDesc);
@@ -84,7 +84,6 @@ const { Content } = await post.render();
       <Button
         class="copy-url-button"
         aria-label="Copy link"
-        data-is-mobile={isMobile()}
         data-url={href}
         data-title={title}
         data-excerpt={excerpt}
@@ -120,6 +119,8 @@ const { Content } = await post.render();
 </BaseLayout>
 
 <script>
+  import { isMobile } from "../../utils/common-utils";
+
   document.addEventListener("astro:page-load", () => {
     const copyUrlButton = document.querySelector(
       ".copy-url-button",
@@ -131,11 +132,12 @@ const { Content } = await post.render();
     async function copyUrl(button: HTMLButtonElement) {
       let url = button.getAttribute("data-url") || "";
       let label = button.innerText;
-      const isMobile = button.getAttribute("data-is-mobile") || false;
       const title = button.getAttribute("data-title") || "";
       const excerpt = button.getAttribute("data-excerpt") || "";
 
-      if (isMobile) {
+      const isMobileDevice = isMobile();
+
+      if (isMobileDevice) {
         const shareData = {
           title: title,
           text: excerpt,
