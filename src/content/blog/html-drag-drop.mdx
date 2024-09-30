@@ -5,13 +5,14 @@ publishDate: "September 14 2024"
 tags:
   - html5
   - javascript
+  - webdevelopment
 seo:
   image:
     src: "/images/html-drag-drop/html-drag-drop.png"
     alt: hello world image
 ---
 
-import SimpleDragDrop from "../../components/posts/SimpleDragDrop.jsx";
+import SimpleDragDrop from "../../components/posts/html-drag-drop/SimpleDragDrop.jsx";
 
 In this post, we will see how to implement drag and drop functionality in browsers using the native drag and drop interface in HTML5.
 
@@ -21,6 +22,7 @@ The idea is simple:
 - Allow dropping the draggable element in the droppable area.
 
 {/* <img src="/images/html-drag-drop/html-drag-drop.png" alt="html drag drop" /> */}
+
 <img src="/images/html-drag-drop/html-drag-drop.svg" alt="html drag drop" />
 
 ### Declare two boxes
@@ -127,3 +129,8 @@ Finally, apply these event handlers to the boxes:
 <SimpleDragDrop client:visible />
 
 This example demonstrates how easy it is to implement drag-and-drop functionality with just a few lines of code. Feel free to expand on this by adding more drag-and-drop targets or customizing the appearance and behavior of the elements further!
+
+#### Read more
+
+- [HTML Drag and Drop API](https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
+- [The HTML5 Drag and Drop API](https://web.dev/articles/drag-and-drop)
