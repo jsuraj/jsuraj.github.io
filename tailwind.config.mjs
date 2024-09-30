@@ -75,7 +75,7 @@ export default {
               content: "none",
             },
             code: {
-              color: "rgb(30 30 30)", // Slightly darker than main text for contrast
+              color: "#844ee7",
               backgroundColor: "rgb(235 234 231)", // Slightly darker than bg-muted
               borderRadius: theme("borderRadius.md"),
               padding: `${theme("spacing.1")} ${theme("spacing.1")}`,
@@ -84,7 +84,7 @@ export default {
             },
             // Dark mode styles for inline code
             ".dark code": {
-              color: "rgb(252 251 246)", // Slightly lighter than main text for contrast
+              color: "#B392F0",
               backgroundColor: "rgb(46 46 46)", // Slightly lighter than bg-muted
             },
             // Preserve styles for code blocks
