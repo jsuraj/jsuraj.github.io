@@ -45,4 +45,5 @@ The `@property` rule represents a custom property registration directly in style
 - Control inheritance of custom properties between parent and child elements.
 
 #### Read more
+
 - [MDN docs `@property`](https://developer.mozilla.org/en-US/docs/Web/CSS/@property)
