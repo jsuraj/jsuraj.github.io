@@ -7,7 +7,7 @@ tags:
   - html5
 seo:
   image:
-    src: "/images/card-animated-border/card-animated-boder.png"
+    src: "/images/card-animated-border/card-animated-border.png"
     alt: css custom @property
 ---
 
