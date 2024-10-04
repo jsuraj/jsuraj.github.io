@@ -40,10 +40,11 @@ export type SiteConfig = {
 const siteConfig: SiteConfig = {
   title: "Suraj Jagtap",
   subtitle: "",
-  description: "",
+  description:
+    "Home page for Suraj Jagtap, a software engineer works on React, LLM, GenAI.",
   image: {
-    src: "",
-    alt: "",
+    src: "/images/hello-world/profile.jpg",
+    alt: "Suraj Jagtap",
   },
   headerNavLinks: [
     {
@@ -68,7 +69,7 @@ const siteConfig: SiteConfig = {
       "- Mobile apps in React Native and Flutter",
     ],
     image: {
-      src: "/images/profile.jpg",
+      src: "/images/hello-world/profile.jpg",
       alt: "Suraj Jagtap",
     },
     actions: [],
