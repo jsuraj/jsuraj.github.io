@@ -10,7 +10,7 @@ isFeatured: true
 seo:
   image:
     src: "/images/html-drag-drop/html-drag-drop.png"
-    alt: hello world image
+    alt: html drag drop
 ---
 
 import SimpleDragDrop from "../../components/posts/html-drag-drop/SimpleDragDrop.jsx";
@@ -124,6 +124,7 @@ Finally, apply these event handlers to the boxes:
   className="w-[300px] h-[300px] border border-black flex items-center justify-center"
 />
 ```
+
 You can add visual cues to highlight when the drag operation is in progress. We will reduce the opacity of the component.
 This can be done by tracking when the drag operation is being performed in a state variable and changing the opacity.
 This is how your react component should look like
@@ -176,8 +177,8 @@ const SimpleDragDrop = () => {
 };
 
 export default SimpleDragDrop;
-
 ```
+
 ## Demo
 
 <SimpleDragDrop client:visible />

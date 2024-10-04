@@ -5,11 +5,10 @@ publishDate: "September 15 2024"
 tags:
   - css
   - html5
-isFeatured: true
 seo:
   image:
-    src: "/images/hello-world/profile.jpg"
-    alt: hello world image
+    src: "/images/card-animated-border/card-animated-boder.png"
+    alt: css custom @property
 ---
 
 CSS is evolving with time and newer features are getting added to it make it easier to implment most commonly used functionality. Today we will see once such feature which makes css even more powerful.
