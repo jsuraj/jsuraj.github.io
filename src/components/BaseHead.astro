@@ -10,7 +10,7 @@ export type Props = {
 };
 
 const {
-  description = "",
+  description = siteConfig.description,
   image = siteConfig.image,
   pageType = "website",
 } = Astro.props;
