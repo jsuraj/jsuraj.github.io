@@ -85,7 +85,7 @@ export default {
             // Dark mode styles for inline code
             ".dark code": {
               color: "#B392F0",
-              backgroundColor: "rgb(46 46 46)", // Slightly lighter than bg-muted
+              backgroundColor: "#24292E", // Slightly lighter than bg-muted
             },
             // Preserve styles for code blocks
             "pre code": {
