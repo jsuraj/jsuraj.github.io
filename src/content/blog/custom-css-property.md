@@ -4,9 +4,7 @@ excerpt: Learn how to use the CSS @property at-rule to define custom properties.
 publishDate: "September 15 2024"
 tags:
   - css
-  - webdevelopment
   - html5
-  - misc
 isFeatured: true
 seo:
   image:

@@ -5,7 +5,7 @@ publishDate: "September 14 2024"
 tags:
   - html5
   - javascript
-  - webdevelopment
+  - react
 isFeatured: true
 seo:
   image:
@@ -124,7 +124,60 @@ Finally, apply these event handlers to the boxes:
   className="w-[300px] h-[300px] border border-black flex items-center justify-center"
 />
 ```
+You can add visual cues to highlight when the drag operation is in progress. We will reduce the opacity of the component.
+This can be done by tracking when the drag operation is being performed in a state variable and changing the opacity.
+This is how your react component should look like
 
+```jsx
+import { useState } from "react";
+
+const SimpleDragDrop = () => {
+  const [isDragging, setIsDragging] = useState(false);
+
+  const handleOnDragStart = (event) => {
+    setIsDragging(true);
+    event.dataTransfer.setData("text/plain", event.target.id);
+  };
+
+  const handleOnDrop = (event) => {
+    event.preventDefault();
+    setIsDragging(false);
+    const data = event.dataTransfer.getData("text/plain");
+    event.target.appendChild(document.getElementById(data));
+  };
+
+  const handleDragOver = (event) => {
+    event.preventDefault();
+  };
+
+  return (
+    <div className="flex gap-8">
+      <div
+        id="box1"
+        onDrop={handleOnDrop}
+        onDragOver={handleDragOver}
+        className="flex h-[300px] w-[300px] items-center justify-center border border-main"
+      >
+        <div
+          id="draggable1"
+          className={`h-[50px] w-[50px] cursor-move bg-red-500 ${isDragging ? "opacity-50" : "opacity-100"}`}
+          draggable={true}
+          onDragStart={handleOnDragStart}
+        />
+      </div>
+      <div
+        id="box2"
+        onDrop={handleOnDrop}
+        onDragOver={handleDragOver}
+        className="flex h-[300px] w-[300px] items-center justify-center border border-main"
+      />
+    </div>
+  );
+};
+
+export default SimpleDragDrop;
+
+```
 ## Demo
 
 <SimpleDragDrop client:visible />
