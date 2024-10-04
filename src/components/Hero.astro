@@ -10,8 +10,8 @@ const hero = siteConfig.hero;
     hero?.image?.src ||
     hero?.text ||
     (hero?.actions && hero.actions.length > 0)) && (
-    <section class="w-full flex flex-col gap-8 mb-16 sm:mb-24">
-      <div class="w-full flex gap-4 items-center">
+    <section class="mb-16 flex w-full flex-col gap-8 sm:mb-24">
+      <div class="flex w-full items-center gap-4">
         {hero.image?.src && (
           <figure>
             <img
@@ -36,7 +36,7 @@ const hero = siteConfig.hero;
         )}
       </div>
       {hero.text && (
-        <ul class="max-w-none prose prose-dante sm:prose-lg">
+        <ul class="prose prose-dante max-w-none sm:prose-lg">
           {hero.text.map((line) => (
             <li set:html={marked.parse(line)} />
           ))}

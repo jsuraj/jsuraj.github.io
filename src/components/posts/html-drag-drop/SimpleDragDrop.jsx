@@ -19,11 +19,11 @@ const SimpleDragDrop = () => {
         id="box1"
         onDrop={handleOnDrop}
         onDragOver={handleDragOver}
-        className="w-[300px] h-[300px] border border-main flex items-center justify-center"
+        className="flex h-[300px] w-[300px] items-center justify-center border border-main"
       >
         <div
           id="draggable1"
-          className="w-[50px] h-[50px] bg-red-500 cursor-move"
+          className="h-[50px] w-[50px] cursor-move bg-red-500"
           draggable={true}
           onDragStart={handleOnDragStart}
         />
@@ -32,7 +32,7 @@ const SimpleDragDrop = () => {
         id="box2"
         onDrop={handleOnDrop}
         onDragOver={handleDragOver}
-        className="w-[300px] h-[300px] border border-main flex items-center justify-center"
+        className="flex h-[300px] w-[300px] items-center justify-center border border-main"
       />
     </div>
   );

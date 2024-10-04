@@ -7,6 +7,7 @@ tags:
   - webdevelopment
   - html5
   - misc
+isFeatured: true
 seo:
   image:
     src: "/images/hello-world/profile.jpg"
