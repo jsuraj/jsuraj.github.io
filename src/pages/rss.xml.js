@@ -8,11 +8,19 @@ export async function GET(context) {
     title: siteConfig.title,
     description: siteConfig.description,
     site: context.site,
+    xmlns: {
+      media: "http://search.yahoo.com/mrss/",
+    },
     items: blog.map((post) => ({
       title: post.data.title,
       pubDate: post.data.publishDate,
       description: post.data.excerpt,
       link: `/blog/${post.slug}/`,
+      customData: `<media:content
+        type="image/${post.data.seo.image.src.split(".")[1] == "jpg" ? "jpeg" : "png"}"
+        medium="image"
+        url="${context.site + post.data.seo.image.src}" />
+      `,
     })),
   });
 }
