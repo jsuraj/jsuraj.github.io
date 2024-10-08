@@ -8,5 +8,10 @@ import partytown from "@astrojs/partytown";
 // https://astro.build/config
 export default defineConfig({
   site: "https://jsuraj.github.io",
-  integrations: [tailwind(), mdx(), react(), partytown()],
+  integrations: [
+    tailwind(),
+    mdx(),
+    react(),
+    partytown({ config: { forward: ["dataLayer.push"] } }),
+  ],
 });
