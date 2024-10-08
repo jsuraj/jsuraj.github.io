@@ -6,6 +6,7 @@ import BaseHead, {
 import Nav from "../components/Nav.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import GoogleAnalytics from "../components/GoogleAnalytics.astro";
 
 export type Props = HeadProps & { showHeader?: boolean };
 const { showHeader = true, ...head } = Astro.props;
@@ -14,6 +15,7 @@ const { showHeader = true, ...head } = Astro.props;
 <html lang="en" class="break-words antialiased">
   <head>
     <BaseHead {...head} />
+    <GoogleAnalytics measurementId={"G-Z0DB461BK0"} />
     <script>
       if (localStorage.theme === "dark") {
         document.documentElement.classList.add("dark");
