@@ -42,6 +42,6 @@ The `@property` rule represents a custom property registration directly in style
 - To set default values for custom properties to maintain consistent styles when values are missing.
 - Control inheritance of custom properties between parent and child elements.
 
-#### Read more
+### Read more
 
 - [MDN docs `@property`](https://developer.mozilla.org/en-US/docs/Web/CSS/@property)
