@@ -20,20 +20,20 @@ was to build a solution close to this.
 
 ## Key Features of the Website Builder
 
-- **Drag-and-Drop Simplicity**:
+- **Drag-and-Drop elements**:
   Users can drag elements like text boxes, images, links, or columns onto the page, positioning them effortlessly with a few clicks.
   
-- **Customizable Elements**:
+- **Customizable elements**:
   Once an element is placed, users can modify it to fit their vision. Whether it’s tweaking the text, adjusting the layout,
   or changing the style, the builder allows for both quick edits and fine-tuned customization.
 
-- **Support for Multiple Elements**: The tool currently supports various elements like text, containers, columns, links, and images.
+- **Support for multiple elements**: The tool currently supports various elements like text, containers, columns, links, and images.
   It’s built in a way that we can easily extend the list of supported elements in the future.
 
-- **Granular Style Control**:
+- **Granular style control**:
   Users can manually customize the styles, giving them complete control over how each part of the website looks and behaves.
 
-- **Undo/Redo Functionality**: 
+- **Undo/Redo functionality**: 
   The builder supports undo and redo operations, as the user makes changes to the design.
 
 ## Integrating AI in the workflow:
@@ -42,24 +42,24 @@ Here’s where things get exciting! While the current user flow allows users to 
 fixing typos—we’re introducing AI to automate some of these tasks. By leveraging large language models, we’re turning everyday tasks
 into seamless, natural-language-driven experiences.
 
-- **Natural Language Commands**:
+- **Natural language commands**:
   Imagine adding text to a webpage and asking the AI to translate it, change its tone, or even rewrite
   the copy entirely—all by typing out a simple command. Instead of manually updating elements, users can let AI handle it, saving time and effort.
 
-- **Granular AI Control**:
+- **Granular AI control**:
   The AI doesn’t just make broad changes; users can apply edits at the element level, meaning that specific sections of the website can be
   customized based on unique user commands.
 
 ## What AI Can Do Right Now
 
-- **Text Translation & Editing**:
+- **Text translation & editing**:
   The AI can translate text, change its tone, or even rewrite content altogether—all without ever leaving the builder.
 
-- **Styling Text via Commands**:
+- **Styling text using natural language**:
   Need the text to be bold or red? Just ask. Users can instruct the AI to style elements in real-time, whether it’s changing colors,
   adding emphasis, or tweaking alignment. This is powered by the `Gemini 1.5 Flash` language model, which understands commands like "make this text bold" or "turn this text red."
 
-- **Screenshot-Driven Styling**:
+- **Styling using screenshots**:
   The `Gemini 1.5 Flash` model supports text and image input. The user can provide screenshot of an element's design and instruct the AI to
   make the element look like the image. Currently in this version simpler designs are supported.
 
