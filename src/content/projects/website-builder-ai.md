@@ -16,7 +16,7 @@ seo:
 
 Imagine having a tool that allows you to build a website effortlessly, where you can simply drag and drop elements into place,
 customize them with precision, and preview your creation across devices—all without writing a single line of code. The goal
-was to build a soultion close to this.
+was to build a solution close to this.
 
 ## Key Features of the Website Builder
 
@@ -60,7 +60,7 @@ into seamless, natural-language-driven experiences.
   adding emphasis, or tweaking alignment. This is powered by the `Gemini 1.5 Flash` language model, which understands commands like "make this text bold" or "turn this text red."
 
 - **Screenshot-Driven Styling**:
-  The `Gemini 1.5 Flash` model supports text and image input. The user can provide screeshot of an element's design and instruct the AI to
+  The `Gemini 1.5 Flash` model supports text and image input. The user can provide screenshot of an element's design and instruct the AI to
   make the element look like the image. Currently in this version simpler designs are supported.
 
 ## Demo
@@ -70,6 +70,8 @@ Try the live demo at [https://websitebuilderx.vercel.app](https://websitebuilder
   <iframe src="https://www.loom.com/embed/faee8e376beb40fba632533cd5bb4c22?sid=b5bef9b3-2b9c-47dc-99de-fd1a99c21a4b" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
   </iframe>
 </div>
+
+[Youtube video](https://youtu.be/bBC1yFSy3m4)
 
 This is just an brief introduction to the tool, I will be writing about it in details in the upcoming posts.
 
