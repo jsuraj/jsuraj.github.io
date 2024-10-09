@@ -1,7 +1,7 @@
 ---
 title: AI Website Builder.
-description: Create stunning websites effortlessly with our drag-and-drop builder, designed for maximum ease and flexibility.
-             With AI-powered features like real-time text translation and styling, you can customize your site with simple commands—no coding required!.
+description: Integrating AI to enhance functionality of a website builder, allowing users to update copy, style etc using natural
+  language commands or adding screenshots.
 publishDate: "September 15 2024"
 isFeatured: true
 seo:
