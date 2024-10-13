@@ -1,6 +1,7 @@
 ---
 title: AI Website Builder.
-description: Integrating AI to enhance functionality of a website builder, allowing users to update copy, style etc using natural
+description:
+  Integrating AI to enhance functionality of a website builder, allowing users to update copy, style etc using natural
   language commands or adding screenshots.
 publishDate: "September 15 2024"
 isFeatured: true
@@ -22,7 +23,6 @@ was to build a solution close to this.
 
 - **Drag-and-Drop elements**:
   Users can drag elements like text boxes, images, links, or columns onto the page, positioning them effortlessly with a few clicks.
-  
 - **Customizable elements**:
   Once an element is placed, users can modify it to fit their vision. Whether it’s tweaking the text, adjusting the layout,
   or changing the style, the builder allows for both quick edits and fine-tuned customization.
@@ -33,7 +33,7 @@ was to build a solution close to this.
 - **Granular style control**:
   Users can manually customize the styles, giving them complete control over how each part of the website looks and behaves.
 
-- **Undo/Redo functionality**: 
+- **Undo/Redo functionality**:
   The builder supports undo and redo operations, as the user makes changes to the design.
 
 ## Integrating AI in the workflow:
@@ -64,6 +64,7 @@ into seamless, natural-language-driven experiences.
   make the element look like the image. Currently in this version simpler designs are supported.
 
 ## Demo
+
 Try the live demo at [https://websitebuilderx.vercel.app](https://websitebuilderx.vercel.app).
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0;">
