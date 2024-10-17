@@ -43,7 +43,7 @@ const siteConfig: SiteConfig = {
   description:
     "Home page for Suraj Jagtap, a software engineer works on React, LLM, GenAI.",
   image: {
-    src: "/images/hello-world/profile.jpg",
+    src: "/images/hello-world/profile.webp",
     alt: "Suraj Jagtap",
   },
   headerNavLinks: [
