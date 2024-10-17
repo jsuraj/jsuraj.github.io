@@ -69,7 +69,7 @@ const siteConfig: SiteConfig = {
       "- Mobile apps in React Native and Flutter",
     ],
     image: {
-      src: "/images/hello-world/profile.jpg",
+      src: "/images/hello-world/profile.webp",
       alt: "Suraj Jagtap",
     },
     actions: [],
