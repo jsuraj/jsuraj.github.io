@@ -5,6 +5,8 @@ import mdx from "@astrojs/mdx";
 import react from "@astrojs/react";
 import partytown from "@astrojs/partytown";
 
+import sitemap from "@astrojs/sitemap";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://jsuraj.github.io",
@@ -13,5 +15,6 @@ export default defineConfig({
     mdx(),
     react(),
     partytown({ config: { forward: ["dataLayer.push"] } }),
+    sitemap(),
   ],
 });
