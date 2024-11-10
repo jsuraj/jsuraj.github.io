@@ -6,6 +6,7 @@ tags:
   - react
   - javascript
   - html5
+isFeatured: true
 seo:
   image:
     src: "/images/react-hooks-basic/react-hooks-basic.svg"
