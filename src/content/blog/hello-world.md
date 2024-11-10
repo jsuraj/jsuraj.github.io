@@ -3,7 +3,6 @@ title: Hello world
 excerpt: Intro blog - sharing insights and learnings.
 publishDate: "September 13 2024"
 tags:
-  - introduction
   - javascript
   - generative-ai
   - misc
